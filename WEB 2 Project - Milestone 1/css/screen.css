@@ -1,0 +1,325 @@
+﻿@charset "utf-8";
+@import url(mini-reset.css);
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+}
+
+/* Webseiteninhalt mittig ausrichten */
+#main-wrapper {
+  max-width: 920px;
+  margin: 10px auto;
+}
+
+/* Header */
+header {
+  position: relative;
+}
+
+header img {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+header h1 {
+  color: #044D7A;
+  font-size: 50px;
+}
+
+/* Hauptnavigation */
+nav {
+  display: table;
+  float: right;
+  margin-right: 50px;
+  margin-top: 15px;
+}
+
+nav+img {
+  max-width: 100%;
+  width: 920px;
+}
+
+nav ol li {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  float: left;
+}
+
+nav ol li a {
+  color: #444;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 23px 15px;
+  position: relative;
+  z-index: 99;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ol li a.active, nav ol li a:hover {
+  color: #787a04;
+  text-decoration: underline;
+}
+
+/* Subnavigation (aufklappbar, falls grösser 920px) */
+
+.submenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+nav li:hover .submenu,
+nav li:active .submenu,
+nav li:focus .submenu {
+  display: block;
+  height: auto;
+  background-color: rgb(255, 255, 255); /* Microsoft Fallback */
+  background-color: rgb(255, 255, 255, .9);
+}
+
+nav li .submenu a {
+  line-height: .8em;
+}
+
+/* Content */
+main {
+  width: 100%;
+}
+
+article h1 {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+article h2 {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+main .kontakt {
+  margin-top: 20px;
+  padding-bottom: 35px;
+}
+
+main strong {
+  font-weight: bold;
+}
+
+main p {
+  margin: 20px 0;
+}
+
+main ol {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* SVG Icons auf Startseite */
+
+.sectionitems {
+	    margin-left: 5%;
+}
+
+.section a {
+	position: relative;
+	border: solid 1px #787a04;
+  width: 27%;
+  margin: 2%;
+  padding: 1em 0;
+  float: left;
+}
+
+.section a img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section a:hover {
+  background-color: #787a04;
+}
+
+.section:hover .svg {
+  filter: invert(.5);
+}
+
+/* Tooltips */
+.section .sectiontext {
+  visibility: hidden;
+  width: 50%;
+	top: 0;
+	left: 0;
+  background-color: #fff;
+  color: #787a04;
+  text-align: center;
+  padding: 5px 0;
+	margin: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+.section:hover .sectiontext {
+  visibility: visible;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Erstellt ein responsive iframe */
+.googlemap {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.googlemap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Formatierung für Formular in Kontaktformular */
+fieldset {
+  border: 1px solid grey;
+  width: 100%;
+  border-radius: 10px;
+}
+
+label {
+  margin: 0.1739130434782609% 0 0.1739130434782609% 0.8695652173913043%;
+  padding: 0;
+  color: black;
+}
+
+input, textarea, select {
+  display: block;
+  margin: 15px 0 15px 0.8695652173913043%;
+  padding: 5px 10px;
+  border: 1px solid black;
+  font-size: inherit;
+  color: black;
+  width: 80%;
+  border-radius: 5px;
+}
+
+select {
+  width: 82.4%;
+}
+
+fieldset.radiocheckgroup {
+  border: 0;
+  padding: 0;
+  position: relative;
+  margin: 10px 0;
+}
+
+fieldset.radiocheckgroup input {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  float: left;
+  margin-left: 0.8695652173913043%;
+}
+
+fieldset.radiocheckgroup input+label {
+  margin-left: 3%;
+}
+
+input[type="submit"]:valid {
+  color: black;
+  width: 82.4%;
+  background: none;
+  background-color: #eee;
+  opacity: 1.0;
+}
+
+.required {
+  color: red;
+}
+
+/* Pseudo Klassen für Form Elemente */
+input:focus, textarea:focus {
+  background-color: #ffd;
+}
+
+input:invalid, textarea:invalid {
+  color: red;
+}
+
+input:valid, textarea:valid {
+  color: green;
+}
+
+/* Placeholder Text */
+input::placeholder, textarea::placeholder {
+  color: #999;
+}
+
+/* Footer */
+footer {
+  background-color: #787a04;
+  height: 120px;
+  padding: 10px;
+	margin-top:10px;
+}
+
+footer, footer p, footer a {
+  color: white;
+}
+
+footer h6 {
+  font-weight: bold;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 920px) {
+  nav {
+    float: none;
+    margin: 0;
+  }
+
+  nav ol li {
+    display: block;
+    float: none;
+  }
+
+  nav ol li a {
+    padding: 10px 15px;
+  }
+
+  nav .submenu {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  /* on mobile phones, disable the tooltip */
+  .section:hover .sectiontext {
+    visibility: hidden;
+  }
+
+}
+
+/* ----------------------------------- Browser-spezifische Korrekturen */
+.js div {}
+
+/* apply only on JavaScript enabled browsers */
+.ie7 div {}
+
+/* apply only on Internet Explorer 7 and below */
+.ie6 div {}
+
+/* apply only on Internet Explorer 6 and below */
